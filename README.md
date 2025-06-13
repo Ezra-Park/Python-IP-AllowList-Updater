@@ -108,7 +108,7 @@ The automation is achieved through a simple, step-by-step Python algorithm:
 ## 📈 Future Improvements
 
 * **Function with Parameters:** Encapsulate the logic within a function that accepts `import_file` and `remove_list` as parameters, making it reusable.
-* **Error Handling:** Add more robust error handling (e.g., for empty files, invalid IP formats).
+* **Error Handling:** Add more robust error handling (e.g., for empty files, invalid IP formats, parsing comments).
 * **More Efficient Removal:** For very large lists, using a `set` for `remove_list` and then list comprehension for filtering can be more efficient (`updated_ip_list = [ip for ip in ip_addresses if ip not in remove_set]`).
 * **User Input:** Allow the user to input the file name and/or IP addresses to remove directly via the terminal.
 * **Logging:** Implement basic logging to record when the script runs and what changes were made.
