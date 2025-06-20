@@ -1,20 +1,20 @@
 # Python IP Allow List Updater
 
-## 🎯 Project Overview
+## Project Overview
 
 This Python script automates the process of updating an IP address "allow list" by removing specified IP addresses. This is a practical task commonly faced in network security and system administration, where maintaining accurate access control lists is crucial. The script demonstrates basic file I/O, string manipulation, and list operations in Python.
 
-## ☁️ Problem Statement
+## Problem Statement
 
 In many IT and security environments, IP allow lists are used to control network access. Manually removing multiple IP addresses from such a list can be tedious and prone to human error. This project addresses the need for an automated solution to efficiently clean an `allow_list.txt` file by removing a predefined set of "unwanted" IP addresses.
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 * **Language:** Python 3 (developed in a Jupyter Notebook environment, but runnable as a standard Python script)
 * **Editor:** Jupyter Notebook (for initial development and testing)
 * **Input File:** `allow_list.txt` (simple text file with IP addresses separated by spaces or newlines)
 
-## 🧠 Algorithm & Script Breakdown
+## Algorithm & Script Breakdown
 
 The automation is achieved through a simple, step-by-step Python algorithm:
 
@@ -42,7 +42,7 @@ The automation is achieved through a simple, step-by-step Python algorithm:
     * The `allow_list.txt` file is opened in write mode (`"w"`).
     * The modified `ip_addresses` string is written back to the file, effectively overwriting the original content with the updated list.
 
-## 🚀 How to Use (Simple Example)
+## How to Use (Simple Example)
 
 1.  **Create `allow_list.txt`:**
     Create a file named `allow_list.txt` in the same directory as the Python script.
@@ -105,7 +105,7 @@ The automation is achieved through a simple, step-by-step Python algorithm:
     python update_allow_list.py
     ```
 
-## 📈 Future Improvements
+## Future Improvements
 
 * **Function with Parameters:** Encapsulate the logic within a function that accepts `import_file` and `remove_list` as parameters, making it reusable.
 * **Error Handling:** Add more robust error handling (e.g., for empty files, invalid IP formats, parsing comments).
@@ -114,7 +114,7 @@ The automation is achieved through a simple, step-by-step Python algorithm:
 * **Logging:** Implement basic logging to record when the script runs and what changes were made.
 * **Backup:** Create a backup of the original `allow_list.txt` before modifying it.
 
-## 🤝 Contact
+## Contact
 
 Feel free to connect with me on [LinkedIn](www.linkedin.com/in/ezra-park-779325330) if you have any questions or feedback.
 
