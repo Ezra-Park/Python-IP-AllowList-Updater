@@ -2,11 +2,11 @@
 
 ## Project Overview
 
-This Python script automates the process of updating an IP address "allow list" by removing specified IP addresses. This is a practical task commonly faced in network security and system administration, where maintaining accurate access control lists is crucial. The script demonstrates basic file I/O, string manipulation, and list operations in Python.
+This Python script automates the process of updating an IP address "allow list" by removing specified IP addresses which is particularly useful where maintaining accurate access control lists is crucial (e.g. network security & administration). The script demonstrates basic file I/O, string manipulation, and list operations in Python.
 
 ## Problem Statement
 
-In many IT and security environments, IP allow lists are used to control network access. Manually removing multiple IP addresses from such a list can be tedious and prone to human error. This project addresses the need for an automated solution to efficiently clean an `allow_list.txt` file by removing a predefined set of "unwanted" IP addresses.
+Manually removing multiple IP addresses from an allow list in IT/security environments can be tedious and prone to human error. This project addresses the need for an automated solution to efficiently clean an `allow_list.txt` file by removing a predefined set of "unwanted" IP addresses.
 
 ## Technologies Used
 
@@ -33,7 +33,6 @@ The automation is achieved through a simple, step-by-step Python algorithm:
 4.  **Remove Unwanted IP Addresses:**
     * The script iterates through each `element` (IP address) in the `ip_addresses` list.
     * If an `element` is found within the `remove_list`, it is removed from the `ip_addresses` list using `ip_addresses.remove(element)`.
-    * **Note on Iteration:** While this approach works for small lists, for very large lists, iterating and removing from the same list can be inefficient. A more optimized approach for large datasets might involve creating a *new* list that only includes elements not in the `remove_list`. (This can be a "Future Improvements" idea!)
 
 5.  **Convert List Back to String:**
     * The `ip_addresses` list is joined back into a single string, with each IP address separated by a space, using `" ".join(ip_addresses)`. This prepares the data for writing back to the file.
@@ -102,14 +101,14 @@ The automation is achieved through a simple, step-by-step Python algorithm:
 3.  **Run the Script:**
     Open your terminal or command prompt, navigate to the directory where you saved the files, and run:
     ```bash
-    python update_allow_list.py
+    python3 update_allow_list.py
     ```
 
 ## Future Improvements
 
 * **Function with Parameters:** Encapsulate the logic within a function that accepts `import_file` and `remove_list` as parameters, making it reusable.
 * **Error Handling:** Add more robust error handling (e.g., for empty files, invalid IP formats, parsing comments).
-* **More Efficient Removal:** For very large lists, using a `set` for `remove_list` and then list comprehension for filtering can be more efficient (`updated_ip_list = [ip for ip in ip_addresses if ip not in remove_set]`).
+* **More Efficient Removal:** While this approach works for small lists, for very large lists, iterating and removing from the same list can be inefficient. A more optimized approach for large datasets might involve creating a *new* list that only includes elements not in the `remove_list`.
 * **User Input:** Allow the user to input the file name and/or IP addresses to remove directly via the terminal.
 * **Logging:** Implement basic logging to record when the script runs and what changes were made.
 * **Backup:** Create a backup of the original `allow_list.txt` before modifying it.
